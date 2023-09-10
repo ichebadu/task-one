@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class TaskOneController {
-    private TaskOneService taskOneService;
+    private final TaskOneService taskOneService;
 
     @GetMapping("/api")
     public UserResponse getUser(@RequestParam ("slack_name") String slack_name,
