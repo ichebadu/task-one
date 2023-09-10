@@ -60,7 +60,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: /Users/decag/Desktop/zuri/task-one
           dockerfile: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/task-one:tagname
