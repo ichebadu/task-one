@@ -18,6 +18,7 @@ public class TaskOneServiceImpl implements TaskOneService{
                 .track(track)
                 .github_file_url("https://github.com/ichebadu/task-one/blob/main/target/task-one-0.0.1-SNAPSHOT.jar")
                 .github_repo_url("https://github.com/ichebadu/task-one")
+                .status_code(200)
                 .build();
     }
 
