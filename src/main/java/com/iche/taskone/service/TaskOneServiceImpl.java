@@ -32,5 +32,4 @@ public class TaskOneServiceImpl implements TaskOneService{
         DayOfWeek dayOfWeek = LocalDateTime.now(ZoneId.of("UTC")).getDayOfWeek();
         return dayOfWeek.toString();
     }
-
 }
