@@ -7,6 +7,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Service
 public class TaskOneServiceImpl implements TaskOneService{
@@ -30,6 +31,6 @@ public class TaskOneServiceImpl implements TaskOneService{
 
     private static String currentDay() {
         DayOfWeek dayOfWeek = LocalDateTime.now(ZoneId.of("UTC")).getDayOfWeek();
-        return dayOfWeek.toString();
+        return dayOfWeek.toString().substring(0, 1) + dayOfWeek.toString().substring(1).toLowerCase(Locale.ROOT);
     }
 }
