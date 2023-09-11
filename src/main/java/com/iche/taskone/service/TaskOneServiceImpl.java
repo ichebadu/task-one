@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
@@ -26,7 +27,8 @@ public class TaskOneServiceImpl implements TaskOneService{
     private static String currentUtcTime() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
         LocalDateTime localDateTime = LocalDateTime.now();
-        return localDateTime.format(formatter);
+        String utcTime = localDateTime.atOffset(ZoneOffset.UTC).format(formatter);
+        return utcTime;
     }
 
     private static String currentDay() {
