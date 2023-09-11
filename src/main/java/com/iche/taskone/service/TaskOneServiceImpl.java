@@ -21,7 +21,7 @@ public class TaskOneServiceImpl implements TaskOneService{
     }
 
     private static String currentUtcTime() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss 'Z");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
         LocalDateTime localDateTime = LocalDateTime.now();
         return localDateTime.format(formatter);
     }
