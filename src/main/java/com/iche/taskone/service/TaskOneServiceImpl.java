@@ -15,6 +15,7 @@ public class TaskOneServiceImpl implements TaskOneService{
                 .slack_name(slack_name)
                 .current_day(currentDay())
                 .utc_time(currentUtcTime())
+                .track(track)
                 .github_file_url("https://github.com/ichebadu/task-one/blob/main/target/task-one-0.0.1-SNAPSHOT.jar")
                 .github_repo_url("https://github.com/ichebadu/task-one")
                 .build();
