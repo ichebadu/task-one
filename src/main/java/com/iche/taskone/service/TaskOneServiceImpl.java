@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 @Service
 public class TaskOneServiceImpl implements TaskOneService{
+
     public UserResponse getUser(String slack_name, String track){
         return UserResponse.builder()
                 .slack_name(slack_name)
